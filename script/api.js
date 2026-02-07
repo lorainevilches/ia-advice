@@ -63,7 +63,7 @@ async function getAdvice() {
       "Erro ao conectar com a IA. Verifique sua conexão ou a chave.";
   } finally {
     button.disabled = false;
-    button.innerText = "Get the advice";
+    button.innerText = "Pedir novo conselho";
   }
 }
 
