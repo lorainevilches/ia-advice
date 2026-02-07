@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Advice</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Conselho do Dia</h1>
+      <p>Me conta o que tá pesando no seu coração hoje</p>
+      <div class="content-input">
+        <input
+          id="question"
+          type="text"
+          placeholder="Escreva aqui sua dúvida ou situação..."
+        />
+        <button id="get-advice">Get the advice</button>
+        <div id="card">
+          <p id="response"></p>
+        </div>
+      </div>
+    </div>
+    <script src="script/api.js" defer></script>
+  </body>
+</html>

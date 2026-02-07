@@ -1,0 +1,79 @@
+:root {
+  --font-primary: "Inter", system-ui, -apple-system, sans-serif;
+  --font-secondary: "Roboto", Arial, sans-serif;
+  --font-mono: "Fira Code", "Courier New", monospace;
+
+  --font-size-base: 1rem;
+  --font-size-sm: 0.875rem;
+  --font-size-lg: 1.25rem;
+
+  --bg-primary: #0d1117;
+  --bg-secondary: #161b22;
+  --bg-accent: #1f2a44;
+
+  --text-primary: #e6edf3;
+  --text-secondary: #8b949e;
+  --text-accent: #58a6ff;
+
+  --primary: #539bf5;
+  --primary-dark: #388bfd;
+  --cyan: #39c5cf;
+  --purple: #bc8cff;
+  --green: #56d364;
+
+  --border: #30363d;
+  --shadow: rgba(0, 0, 0, 0.6);
+}
+
+body {
+  background: var(--bg-primary);
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-base);
+  color: var(--text-primary);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 85vw;
+  min-height: 90vh;
+  margin: auto;
+
+  .content-input {
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+
+    input,
+    button,
+    #card {
+      width: 100%;
+    }
+
+    button {
+      width: 50%;
+      align-self: center;
+      background: var(--primary);
+      color: var(--bg-primary);
+      border: 1px solid var(--primary-dark);
+      padding: 1em 2em;
+    }
+
+    input {
+      padding: 1em 2em;
+      text-align: center;
+    }
+
+    #card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 12px var(--shadow);
+      padding: 1em 2em;
+      text-align: center;
+    }
+  }
+}
