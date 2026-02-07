@@ -11,15 +11,20 @@
       <h1>Conselho do Dia</h1>
       <p>Me conta o que tá pesando no seu coração hoje</p>
       <div class="content-input">
-        <input
-          id="question"
-          type="text"
-          placeholder="Escreva aqui sua dúvida ou situação..."
-        />
-        <button id="get-advice">Get the advice</button>
+        <div class="input-container">
+          <input
+            id="question"
+            type="text"
+            placeholder="Escreva aqui sua dúvida ou situação..."
+          />
+          <button id="get-advice">Conseguir um conselho</button>
+        </div>
         <div id="card">
           <p id="response"></p>
         </div>
+        <button id="new-advice" style="display: none">
+          Pedir novo conselho
+        </button>
       </div>
     </div>
     <script src="script/api.js" defer></script>

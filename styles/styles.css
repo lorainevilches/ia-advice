@@ -43,27 +43,87 @@ body {
   align-items: center;
   gap: 1.5em;
 }
-.container .content-input input,
-.container .content-input button,
-.container .content-input #card {
+.container .content-input .input-container {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
 }
-.container .content-input button {
+.container .content-input .input-container input {
+  width: 100%;
+  padding: 1em 2em;
+  text-align: center;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  border-radius: 8px;
+  font-size: 1em;
+  transition: border-color 0.2s ease;
+}
+.container .content-input .input-container input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+.container .content-input .input-container input::-moz-placeholder {
+  color: var(--text-secondary);
+}
+.container .content-input .input-container input::placeholder {
+  color: var(--text-secondary);
+}
+.container .content-input .input-container button {
   width: 50%;
   align-self: center;
   background: var(--primary);
   color: var(--bg-primary);
   border: 1px solid var(--primary-dark);
   padding: 1em 2em;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 500;
+  transition: all 0.2s ease;
 }
-.container .content-input input {
-  padding: 1em 2em;
-  text-align: center;
+.container .content-input .input-container button:hover:not(:disabled) {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(83, 155, 245, 0.3);
+}
+.container .content-input .input-container button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
 }
 .container .content-input #card {
+  display: none;
+  width: 100%;
   background: var(--bg-secondary);
   border: 1px solid var(--border);
   box-shadow: 0 4px 12px var(--shadow);
-  padding: 1em 2em;
+  padding: 2em;
   text-align: center;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+.container .content-input #card #response {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: var(--text-primary);
+  margin: 0;
+}
+.container .content-input #new-advice {
+  width: 50%;
+  background: var(--purple);
+  color: var(--text-primary);
+  border: none;
+  padding: 0.8em 2em;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+.container .content-input #new-advice:hover {
+  background: var(--cyan);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(57, 197, 207, 0.3);
 }/*# sourceMappingURL=styles.css.map */
